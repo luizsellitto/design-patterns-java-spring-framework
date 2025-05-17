@@ -54,4 +54,11 @@ public class ClienteRestController {
 		clienteService.deletar(id);
 		return ResponseEntity.ok().build();
 	}
+
+	@DeleteMapping
+	public ResponseEntity<Void> deletarTodos() {
+		clienteService.deletarTodos();
+		return ResponseEntity.ok().build();
+	}
+
 }

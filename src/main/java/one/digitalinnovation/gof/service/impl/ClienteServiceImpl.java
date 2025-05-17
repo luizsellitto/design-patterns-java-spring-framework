@@ -65,6 +65,12 @@ public class ClienteServiceImpl implements ClienteService {
 		clienteRepository.deleteById(id);
 	}
 
+	@Override
+	public void deletarTodos() {
+		// Deletar Cliente por ID.
+		clienteRepository.deleteAll();
+	}
+
 	private void salvarClienteComCep(Cliente cliente) {
 		// Verificar se o Endereco do Cliente já existe (pelo CEP).
 		String cep = cliente.getEndereco().getCep();
